@@ -26,7 +26,6 @@ const connectDB = require('./db/connect')
 const authRouter = require('./routes/auth')
 const jobsRouter = require('./routes/jobs')
 
-app.set('trust proxy', 1)
 app.use(
   rateLimiter({
     windowMs: 15 * 60 * 1000,
