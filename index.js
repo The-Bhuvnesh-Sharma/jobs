@@ -34,9 +34,11 @@ app.use(
   })
 )
 app.use(helmet())
-app.use(cors({
-    credentials: '*'
-}))
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 app.use(xssClean())
 app.use(express.json())
 // extra packages
