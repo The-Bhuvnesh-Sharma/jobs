@@ -9,6 +9,7 @@ const helmet = require("helmet");
 const cors = require("cors");
 const xssClean = require("xss-clean");
 const rateLimiter = require("express-rate-limit");
+const morgan = require('morgan')
 
 // Swagger
 const swaggerUI = require("swagger-ui-express");
@@ -38,6 +39,7 @@ app.use(helmet());
 app.use(cors());
 app.use(xssClean());
 app.use(express.json());
+app.use(morgan('tiny'))
 // extra packages
 
 // Load Swagger
